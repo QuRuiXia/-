@@ -1,0 +1,47 @@
+/*即时聊天*/
+.time{
+    width: 100%;
+    height: 460px;
+    position: absolute;
+    top: 410px;
+    background: white;
+}
+.speak{
+    width: 1150px;
+    margin: 0 auto;
+}
+.speak>h3{
+    margin-top: 30px;
+}
+.speak>form{
+    width: 1150px;
+}
+.speak>form>p{
+    margin-left: 90px;
+}
+.speak>form>p>input{
+    width: 942px;
+    height: 30px;
+    margin-top: 20px;
+    font-size: 18px;
+    padding-left: 16px;
+}
+#pas{
+    margin-left: 52px;
+}
+#text{
+    width: 880px;
+    margin-left: 30px;
+}
+.speak>form>p>button{
+    width: 62px;
+    height: 34px;
+    border: 0;
+    background: #5bc0de;
+    color: white;
+}
+.speak>form>textarea{
+    margin-top: 16px;
+    width: 1150px;
+    height: 150px;
+}

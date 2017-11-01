@@ -1,0 +1,58 @@
+/*部分成员*/
+.big{
+    width: 100%;
+    height: 1390px;
+    background: #fff;
+    position: absolute;
+    top: 50px;
+}
+.one,.two,.three{
+    width: 1150px;
+    height: 1200px;
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+.one .L,.two .L,.three .L{
+    width: 740px;
+    height: 1200px;
+    position: absolute;
+    left: 0;
+    z-index: 99;
+}
+.L>ul>li:nth-of-type(1){
+    width: 740px;
+    margin-top: 30px;
+}
+.L ul>li:nth-of-type(2){
+    margin-top: 20px;
+    line-height: 30px;
+}
+.one .R,.two .R,.three .R{
+    width: 390px;
+    height: 500px;
+    position: absolute;
+    left: 760px;
+    z-index: 9;
+}
+.one .R .tupian,.two .R .tupian,.three .R .tupian{
+    overflow: hidden;
+    width: 360px;
+    height: 500px;
+    margin-top: 30px;
+}
+.R .tupian>img{
+    float: left;
+    display: block;
+    width: 110px;
+    height: 110px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.L>h2,.R>h3{
+    color: #c1343f;
+    margin: 24px 0 20px;
+}
+.L>p{
+    color: #dd4f53;
+}

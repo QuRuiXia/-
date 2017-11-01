@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/a/css/same.css">
+    <link rel="stylesheet" href="/a/css/user.css">
+    <script src="/a/css/jquery-1.11.3.js"></script>
+</head>
+<body>
+<div class="banner">
+    <img src="/a/image/background.jpg" alt="">
+    <div class="line">
+        <div class="line_c">
+            <p>Roux Meetups</p>
+            <ul>
+                <li><a href="http://localhost:3000">Home</a></li>
+                <li><a href="http://localhost:3000/list">Speakers</a></li>
+                <li><a href="http://localhost:3000/form">Feedback</a></li>
+                <li><a href="">Chat</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--用户反馈-->
+    <div class="user">
+        <div class="user_c">
+            <div class="user_l">
+                <h2>Send us feedback</h2>
+                <form>
+                    <h5>Name</h5>
+                    <input type="text" placeholder="Enter your name" id="name" name="name">
+                    <h5>Title</h5>
+                    <input type="text" placeholder="Title of your feedback" id="title" name="title">
+                    <h5>Message</h5>
+                    <textarea placeholder="Enter your message,then hit the submit" id="message" name="message"></textarea>
+                    <input type="button" id="sub" value="Submit" name="sub">
+                </form>
+            </div>
+            <div class="user_r">
+                <h2>Recent Feedback</h2>
+                <div class="a">
+                    <div class="ms"><i>X</i><h4>aaa</h4><b>aaaaaa</b></div>
+                    <div>
+                        <h3 class="aa"></h3>   
+                    </div>
+                </div>
+                <div class="b">
+                    <div class="mc"><i>X</i><h4>I want to send message</h4><b>green</b></div>
+                    <div>
+                        <h3 class="bb"></h3>
+                    </div>
+                </div>
+                <div class="a">
+                    <div class="ms"><i>X</i><h4>Great Speaker</h4><b>Roy</b></div>
+                    <div>
+                        <h3 class="cc"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#sub").click(function () {
+           console.log($(".aa").html());
+            $.ajax({
+                url:"http://localhost:3000/",
+                type:"POST",
+                data:{name:$("#name").val(),title:$("#title").val(),mess:$("#message").val()},
+                success:function (d) {
+                   // console.log(d) 提交的数据
+
+                    $(".aa").append(d.data.name+"<span></span>");
+                    $(".bb").append(d.data.title+"<span></span>");
+                    $(".cc").append(d.data.mess+"<span></span>");
+                }
+            })
+        })
+    })
+</script>
+</body>
+</html>

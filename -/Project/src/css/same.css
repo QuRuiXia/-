@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-style: normal;
+}
+.banner{
+    width: 100%;
+    height: 710px;
+
+}
+.banner img{
+    width: 100%;
+    height: 710px;
+    position: relative;
+    display: block;
+}
+/* 条 */
+.line{
+    width: 100%;
+    height: 50px;
+    background: #cf5565;
+    position: absolute;
+    top: 360px;
+}
+.line_c{
+    overflow: hidden;
+    width: 1150px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    color: white;
+    position: relative;
+}
+.line_c>p{
+    float: left;
+}
+.line_c>ul{
+    float: right;
+}
+.line_c ul>li{
+    float: left;
+    margin-left: 24px;
+}
+.line_c ul li>a{
+    color: white;
+}
+.pic{
+    overflow: hidden;
+    width: 360px;
+    margin-top: 20px;
+}
+.pic>img{
+    float: left;
+    width: 110px;
+    height: 110px;
+    margin: 8px 0 0 10px;
+}
